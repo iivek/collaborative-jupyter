@@ -1,8 +1,8 @@
-## Collaboration-friendly Jupyter skeleton
+## Collaboration-friendly project skeleton sporting Jupyter
 
 A project skeleton with multistage Dockerfile, resulting in:
 * a lightweight container suitable for deployment
-* a development container that sports Jupyter.
+* a development container with Jupyter.
 
 
 ### Instructions
