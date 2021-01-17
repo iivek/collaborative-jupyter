@@ -38,8 +38,6 @@ RUN pip3 install -r requirements/develop.txt
 # Jupyter user and configuration
 #
 RUN useradd -m -s /bin/bash -u $NB_UID $NB_USER
-RUN mkdir $NB_WORKDIR \
-    && chown $NB_USER:$NB_GID $NB_WORKDIR
 
 USER $NB_USER
 
@@ -56,6 +54,8 @@ RUN echo "c.InteractiveShellApp.exec_lines = ['%matplotlib inline']" >> ${CONFIG
 ##\Jupyter user and configuration
 
 USER root
+
+VOLUME $NB_WORKDIR
 
 # By assigning a group with the same gid as docker host to Jovyan user, Jovyan gets the same level of access as the host
 # to the mounted volume as docker host.

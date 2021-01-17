@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+    develop:        
+        build:
+            context: .
+            target: develop
+        ports:
+            - '8888:8888'
+        volumes:
+            - '$PWD/notebooks:/opt/app/notebooks'
+        environment:
+            - NB_GID=$NB_GID        
+    live:        
+        build:
+            context: .
+            target: live
