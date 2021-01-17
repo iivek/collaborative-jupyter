@@ -17,4 +17,4 @@ To run Jupyter from the container and make all changes to the notebooks persist 
 #### Minimal container
 Build and run the container image:
 
-`docker-compose up develop`
+`docker-compose up live`
